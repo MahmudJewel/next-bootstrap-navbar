@@ -1,8 +1,10 @@
-# NavigartionBar-React Bootstrap
+## Nextjs NavigationBar using React Bootstrap
 * Nextjs => ^14.1.0 (stable app router)
 * React => ^18
 * react-bootstrap => ^2.10.1
 * Bootstrap => ^5.3.3
+* Nextjs **Link** instead of React Link
+* Responsive Navbar
 
 ## Getting Started
 
