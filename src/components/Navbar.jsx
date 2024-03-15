@@ -20,10 +20,11 @@ function NavScrollExample() {
                 <Navbar.Brand href="#">Dynamic Nav</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
+                    {/* ===================> left nav <========================  */}
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
+                        // style={{ maxHeight: '100px' }}
+                        // navbarScroll
                     >
 
                         <li>
