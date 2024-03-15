@@ -8,8 +8,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 
 function NavScrollExample() {
+    const pathname = usePathname();
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid>
@@ -23,10 +26,10 @@ function NavScrollExample() {
                     >
 
                         <li>
-                            <Link className="nav-link" href="/"> Home</Link>
+                            <Link className={pathname == "/" ? "active-nav nav-link" : "nav-link"} href="/"> Home</Link>
                         </li>
                         <li>
-                            <Link className="nav-link" href="/page-1"> Page-1</Link>
+                            <Link className={pathname == "/page-1" ? "active-nav nav-link" : "nav-link"} href="/page-1"> Page-1</Link>
                         </li>
                         <li>
                             <Link className="nav-link" href="/not-in"> Not-found</Link>
