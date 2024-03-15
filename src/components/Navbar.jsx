@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 
 function NavScrollExample() {
     const pathname = usePathname();
+    const loginToken = false;
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -64,6 +65,7 @@ function NavScrollExample() {
                             <Link className="nav-link disabled" href="/not-in"> disabled</Link>
                         </li>
                     </Nav>
+                    {/* =============== search form ================= */}
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
@@ -73,6 +75,33 @@ function NavScrollExample() {
                         />
                         <Button variant="outline-success">Search</Button>
                     </Form>
+                    {/* ===================> right nav <========================  */}
+                    <Nav className="me-2 my-2 my-lg-0"
+                    >
+                        {
+                            loginToken ? (
+                                <>
+                                    <li>
+                                        <Link className={pathname == "/me" ? "active-nav nav-link" : "nav-link"} href="/me"> user</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={pathname == "/logout" ? "active-nav nav-link" : "nav-link"} href="/logout"> Logout</Link>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li>
+                                        <Link className={pathname == "/signup" ? "active-nav nav-link" : "nav-link"} href="/signup"> Sign up</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={pathname == "/login" ? "active-nav nav-link" : "nav-link"} href="/login"> Login</Link>
+                                    </li>
+                                </>
+                            )
+                        }
+
+
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
