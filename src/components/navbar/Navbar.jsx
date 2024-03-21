@@ -11,10 +11,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // css 
 import '@/components/navbar/navbar.css'
+// icon 
+import { IoMdPerson } from "react-icons/io";
 
 function Navigationbar() {
     const pathname = usePathname();
-    const loginToken = false;
+    const isLoggedin = false;
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -25,8 +27,8 @@ function Navigationbar() {
                     {/* ===================> left nav <========================  */}
                     <Nav
                         className="me-auto my-2 my-lg-0"
-                        // style={{ maxHeight: '100px' }}
-                        // navbarScroll
+                    // style={{ maxHeight: '100px' }}
+                    // navbarScroll
                     >
 
                         <li>
@@ -82,7 +84,7 @@ function Navigationbar() {
                     <Nav className="me-2 my-2 my-lg-0"
                     >
                         {
-                            loginToken ? (
+                            isLoggedin ? (
                                 <>
                                     <li>
                                         <Link className={pathname == "/me" ? "active-nav nav-link" : "nav-link"} href="/me"> user</Link>
@@ -102,7 +104,38 @@ function Navigationbar() {
                                 </>
                             )
                         }
-
+                    </Nav>
+                    {/* auth functionality  */}
+                    <Nav>
+                        <li className="nav-item dropdown">
+                            <IoMdPerson size="40px" color="green" className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" />
+                            <ul className="dropdown-menu dropdown-menu-end">
+                                {/* <li>
+                                    <hr className="dropdown-divider" />
+                                </li> */}
+                                {
+                                    isLoggedin ? (
+                                        <>
+                                            <li>
+                                                <Link className={pathname == "/me" ? "active-nav nav-link" : "nav-link"} href="/me"> user</Link>
+                                            </li>
+                                            <li>
+                                                <Link className={pathname == "/logout" ? "active-nav nav-link" : "nav-link"} href="/logout"> Logout</Link>
+                                            </li>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <li>
+                                                <Link className={pathname == "/signup" ? "active-nav nav-link" : "nav-link"} href="/signup"> Sign up</Link>
+                                            </li>
+                                            <li>
+                                                <Link className={pathname == "/login" ? "active-nav nav-link" : "nav-link"} href="/login"> Login</Link>
+                                            </li>
+                                        </>
+                                    )
+                                }
+                            </ul>
+                        </li>
 
                     </Nav>
                 </Navbar.Collapse>
