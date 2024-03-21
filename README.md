@@ -8,6 +8,7 @@
 * Responsive Navbar
 * Edited bootstrap's default styles
     * active field's color default to green
+    * field's border radius default to 15px
 
 ## Getting Started
 

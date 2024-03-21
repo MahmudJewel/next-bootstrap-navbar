@@ -78,7 +78,7 @@ function Navigationbar() {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Search</Button>
+                        {/* <Button variant="outline-success">Search</Button> */}
                     </Form>
                     {/* ===================> right nav <========================  */}
                     <Nav className="me-2 my-2 my-lg-0"
