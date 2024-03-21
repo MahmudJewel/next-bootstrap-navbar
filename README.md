@@ -3,8 +3,11 @@
 * React => ^18
 * react-bootstrap => ^2.10.1
 * Bootstrap => ^5.3.3
+* React icon => ^5.0.1
 * Nextjs **Link** instead of React Link
 * Responsive Navbar
+* Edited bootstrap's default styles
+    * active field's color default to green
 
 ## Getting Started
 
