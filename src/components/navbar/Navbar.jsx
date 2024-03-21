@@ -10,7 +10,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 
-function NavScrollExample() {
+function Navigationbar() {
     const pathname = usePathname();
     const loginToken = false;
 
@@ -109,4 +109,4 @@ function NavScrollExample() {
     );
 }
 
-export default NavScrollExample;
+export default Navigationbar;

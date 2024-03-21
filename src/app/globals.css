@@ -1,3 +1,6 @@
+/* bootstrap  */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 /* ============== navbar =============================== */
 .active-nav,
 .active-nav:active,
