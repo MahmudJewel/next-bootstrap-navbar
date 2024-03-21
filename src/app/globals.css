@@ -1,21 +1,5 @@
 /* bootstrap  */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-/* ============== navbar =============================== */
-.active-nav,
-.active-nav:active,
-.active-nav:focus,
-.nav-link:hover {
-    background: aqua;
-    color: black;
-    border: 2px solid aqua ;
-    border-radius: 15px;
-    padding: 5px;
-}
 
-/* .nav-link:hover {
-    background: white;
-    color: black;
-    border: 2px solid aqua !important;
-    border-radius: 15px;
-} */
+
